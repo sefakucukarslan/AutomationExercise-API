@@ -7,10 +7,10 @@ using TechTalk.SpecFlow;
 
 namespace AutomationExercise.Steps
 {
-    [Binding, Scope(Feature = "CreateUserAccount")]
-    public class CreateUserAccountSteps
+    [Binding,Scope(Feature ="UpdateUserAccount")]
+    public class UpdateUserAccountSteps
     {
-        CreateUserAccountActions action = new CreateUserAccountActions();
+        UpdateUserAccountActions action = new UpdateUserAccountActions();
         List<NameValuePair> nameValuePairs;
 
         [StepDefinition("Request Method '(.*)' olarak ayarlanır")]
@@ -45,12 +45,12 @@ namespace AutomationExercise.Steps
             };
         }
 
-        [StepDefinition(@"Create user account api çağrılır")]
-        public void RunUserAccount()
+        [StepDefinition(@"Update user account api çağrılır")]
+        public void RunUpdateUserAccount()
         {
-            action.RunUserAccount(nameValuePairs);
+            action.RunUpdateUserAccount(nameValuePairs);
         }
-        
+
         [StepDefinition(@"Response Status Code '(.*)' olduğu görülür")]
         public void IsTrueResponseCode(HttpStatusCode statusCode)
         {

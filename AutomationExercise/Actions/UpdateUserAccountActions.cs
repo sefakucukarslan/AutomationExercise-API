@@ -7,17 +7,17 @@ using System.Text.Json;
 
 namespace AutomationExercise.Actions
 {
-    public class CreateUserAccountActions : BaseActions
+    public class UpdateUserAccountActions : BaseActions
     {
         IRestResponse restResponse;
-        CreateUserResponse userResponse;
-        private readonly string Url = "createAccount";
+        UpdateUserResponse userResponse;
+        private readonly string Url = "updateAccount";
 
-        public void RunUserAccount(List<NameValuePair> nameValuePairs)
+        public void RunUpdateUserAccount(List<NameValuePair> nameValuePairs)
         {
             restResponse = ExecuteClientWithParameters(Url, nameValuePairs);
 
-            userResponse = JsonSerializer.Deserialize<CreateUserResponse>(restResponse.Content);
+            userResponse = JsonSerializer.Deserialize<UpdateUserResponse>(restResponse.Content);
         }
 
         public HttpStatusCode GetResponseStatusCode()
