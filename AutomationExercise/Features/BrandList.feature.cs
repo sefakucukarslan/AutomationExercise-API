@@ -127,7 +127,7 @@ this.ScenarioInitialize(scenarioInfo);
 testRunner.And("Request Method \'PUT\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 14
-testRunner.And("Brandlist api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+testRunner.And("BrandList api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 15
 testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");

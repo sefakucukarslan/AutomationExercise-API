@@ -97,6 +97,9 @@ testRunner.And("Request Method \'POST\' olarak ayarlanır", ((string)(null)), ((
 testRunner.And("Request parameter değerine \'jean\' değeri eklenir", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 8
+testRunner.And("Search Product api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 9
 testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }
@@ -110,7 +113,7 @@ testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post To search products without search_product paramater", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -120,19 +123,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 12
+#line 13
 testRunner.And("Request Method \'POST\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 13
-testRunner.And("ProductList api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
 #line 14
-testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+testRunner.And("Search Product api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 15
-testRunner.And("Response Content Response Code \'400\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 16
+testRunner.And("Response Content Response Code \'400\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 17
 testRunner.And("Response Content Response Message \'Bad request, search_product parameter is missi" +
                         "ng in POST request.\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden

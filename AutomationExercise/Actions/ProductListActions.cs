@@ -13,7 +13,7 @@ namespace AutomationExercise.Actions
         ProductListResponse productListResponse;
         private readonly string Url = "productsList";
         
-        public void GetAllProductListAction() 
+        public void GetAllProductList() 
         {
             restResponse = ExecuteClient(Url);
             productListResponse = JsonSerializer.Deserialize<ProductListResponse>(restResponse.Content);

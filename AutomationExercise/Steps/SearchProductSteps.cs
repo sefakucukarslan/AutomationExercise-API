@@ -1,25 +1,32 @@
 ﻿using AutomationExercise.Actions;
+using AutomationExercise.Models.Requests;
 using NUnit.Framework;
 using System.Net;
 using TechTalk.SpecFlow;
 
 namespace AutomationExercise.Steps
 {
-    [Binding,Scope(Feature ="ProductList")]
-    public class ProductListSteps
+    [Binding,Scope(Feature ="SearchProduct")]
+    public class SearchProductSteps
     {
-        ProductListActions action = new ProductListActions();
-
-        [StepDefinition(@"Request Method '(.*)' olarak ayarlanır")]
+        SearchProductActions action = new SearchProductActions();
+        SearchProductParameterRequest productParameterRequest;
+        [StepDefinition("Request Method '(.*)' olarak ayarlanır")]
         public void SetMethodType(string type)
         {
             action.SetMethodType(type);
         }
 
-        [StepDefinition(@"ProductList api çağrılır")]
-        public void GetAllProductList()
+        [StepDefinition("Request parameter değerine '(.*)' değeri eklenir")]
+        public void AddRequestParameter(string value)
         {
-            action.GetAllProductList();
+            productParameterRequest = new SearchProductParameterRequest { search_product =  value};
+        }
+        
+        [StepDefinition("Search Product api çağrılır")]
+        public void RunSearchProduct()
+        {
+            action.RunSearchProduct(productParameterRequest);
         }
 
         [StepDefinition(@"Response Status Code '(.*)' olduğu görülür")]
@@ -27,19 +34,13 @@ namespace AutomationExercise.Steps
         {
             Assert.AreEqual(action.GetResponseStatusCode(), statusCode);
         }
-
-        [StepDefinition(@"Response Data dolu olduğu görülür")]
-        public void IsNotEmptyResponseData()
-        {
-            Assert.NotZero(action.GetResponseDataCount());
-        }
         
         [StepDefinition(@"Response Content Response Code '(.*)' olduğu görülür")]
         public void IsTrueResponseContentResponseCode(HttpStatusCode responseCode)
         {
             Assert.AreEqual(action.GetResponseContentResponseCode(), responseCode);
         }
-        
+
         [StepDefinition(@"Response Content Response Message '(.*)' olduğu görülür")]
         public void IsTrueResponseContentResponseMessage(string responseMessage)
         {
