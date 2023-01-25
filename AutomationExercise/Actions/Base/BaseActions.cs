@@ -1,6 +1,7 @@
 ﻿using AutomationExercise.Models.Requests;
 using RestSharp;
 using System;
+using System.Collections.Generic;
 using System.Text.Json;
 
 namespace AutomationExercise.Actions.Base
@@ -44,11 +45,22 @@ namespace AutomationExercise.Actions.Base
             return client.Execute(request);
         }
         
-        public IRestResponse ExecuteClientWithJsonParameter<T>(string url , T parameterRequest)
+        public IRestResponse ExecuteClientWithJson<T>(string url , T parameterRequest)
         {
             client.BaseUrl = new Uri(URL + url);
             request = new RestRequest(methodType);
             request.AddJsonBody(JsonSerializer.Serialize(parameterRequest));
+            return client.Execute(request);
+        }
+        
+        public IRestResponse ExecuteClientWithParameters(string url, List<NameValuePair> nameValuePairs)
+        {
+            client.BaseUrl = new Uri(URL + url);
+            request = new RestRequest(methodType);
+            foreach (var nameValuePair in nameValuePairs)
+            {
+                request.AddParameter(nameValuePair.Name, nameValuePair.Value);
+            }
             return client.Execute(request);
         }
 

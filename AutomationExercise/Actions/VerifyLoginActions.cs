@@ -1,6 +1,7 @@
 ﻿using AutomationExercise.Actions.Base;
 using AutomationExercise.Models.Requests;
 using AutomationExercise.Models.Responses;
+using NUnit.Framework;
 using RestSharp;
 using System.Collections.Generic;
 using System.Net;
@@ -8,17 +9,17 @@ using System.Text.Json;
 
 namespace AutomationExercise.Actions
 {
-    public class CreateUserAccountActions : BaseActions
+    public class VerifyLoginActions : BaseActions
     {
         IRestResponse restResponse;
-        CreateUserResponse userResponse;
-        private readonly string Url = "createAccount";
+        VerifyLoginResponse response;
+        private readonly string Url = "verifyLogin";
 
-        public void RunUserAccount(List<NameValuePair> nameValuePairs)
+        public void RunUserLogin(List<NameValuePair> nameValuePairs)
         {
             restResponse = ExecuteClientWithParameters(Url, nameValuePairs);
 
-            userResponse = JsonSerializer.Deserialize<CreateUserResponse>(restResponse.Content);
+            response = JsonSerializer.Deserialize<VerifyLoginResponse>(restResponse.Content);
         }
 
         public HttpStatusCode GetResponseStatusCode()
@@ -28,12 +29,11 @@ namespace AutomationExercise.Actions
 
         public HttpStatusCode GetResponseContentResponseCode()
         {
-            return userResponse.ResponseCode;
+            return response.ResponseCode;
         }
-
         public string GetResponseContentResponseMessage()
         {
-            return userResponse.Message;
+            return response.Message;
         }
     }
 }

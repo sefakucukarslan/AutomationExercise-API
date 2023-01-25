@@ -94,7 +94,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Request Method \'POST\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 7
- testRunner.And("Request parameter değerine \'email\' ve \'password\' değeri eklenir", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Request parameter değerine \'sefa@gmail.com\' ve \'1234\' değeri eklenir", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 8
  testRunner.And("Verify login api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");

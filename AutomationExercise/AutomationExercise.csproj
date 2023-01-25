@@ -102,17 +102,20 @@
     <Compile Include="Actions\CreateUserAccountActions.cs" />
     <Compile Include="Actions\ProductListActions.cs" />
     <Compile Include="Actions\SearchProductActions.cs" />
+    <Compile Include="Actions\VerifyLoginActions.cs" />
     <Compile Include="Models\Requests\CreateUserParameterRequest.cs" />
     <Compile Include="Models\Requests\SearchProductParameterRequest.cs" />
     <Compile Include="Models\Responses\BrandListResponse.cs" />
     <Compile Include="Models\Responses\CreateUserResponse.cs" />
     <Compile Include="Models\Responses\ProductListResponse.cs" />
     <Compile Include="Models\Responses\SearchProductResponse.cs" />
+    <Compile Include="Models\Responses\VerifyLoginResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\BrandListSteps.cs" />
     <Compile Include="Steps\CreateUserAccountSteps.cs" />
     <Compile Include="Steps\ProductListSteps.cs" />
     <Compile Include="Steps\SearchProductSteps.cs" />
+    <Compile Include="Steps\VerifyLoginSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

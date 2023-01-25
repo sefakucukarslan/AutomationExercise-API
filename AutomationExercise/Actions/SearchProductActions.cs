@@ -15,7 +15,7 @@ namespace AutomationExercise.Actions
 
         public void RunSearchProduct(SearchProductParameterRequest requestParameter)
         {
-            restResponse = ExecuteClientWithJsonParameter<SearchProductParameterRequest>(Url ,requestParameter);
+            restResponse = ExecuteClientWithJson<SearchProductParameterRequest>(Url ,requestParameter);
             searchProductResponse = JsonSerializer.Deserialize<SearchProductResponse>(restResponse.Content);
         }
 

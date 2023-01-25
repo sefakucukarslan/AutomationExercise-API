@@ -75,7 +75,7 @@ namespace AutomationExercise.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Create/Register User Account")]
-        [NUnit.Framework.TestCaseAttribute("sefarslan", "sefa@gmail.com", "1234", "Mr.", "10/02/1996", "2", "1996", "Sefa", "Kucukarslan", "Intertech", "Seker", "Kurtulus", "Türkiye", "54100", "Adapazari", "Sakarya", "7778889911", null)]
+        [NUnit.Framework.TestCaseAttribute("sefarslan", "s@gmail.com", "1234", "Mr.", "10/02/1996", "2", "1996", "Sefa", "Kucukarslan", "Intertech", "Seker", "Kurtulus", "Türkiye", "54100", "Adapazari", "Sakarya", "7778889911", null)]
         public void CreateRegisterUserAccount(
                     string name, 
                     string email, 
