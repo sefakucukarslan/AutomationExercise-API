@@ -11,6 +11,7 @@ namespace AutomationExercise.Steps
     {
         SearchProductActions action = new SearchProductActions();
         SearchProductParameterRequest productParameterRequest;
+
         [StepDefinition("Request Method '(.*)' olarak ayarlanır")]
         public void SetMethodType(string type)
         {
@@ -20,7 +21,7 @@ namespace AutomationExercise.Steps
         [StepDefinition("Request parameter değerine '(.*)' değeri eklenir")]
         public void AddRequestParameter(string value)
         {
-            productParameterRequest = new SearchProductParameterRequest { search_product =  value};
+            productParameterRequest = new SearchProductParameterRequest { Search_product =  value};
         }
         
         [StepDefinition("Search Product api çağrılır")]

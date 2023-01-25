@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace AutomationExercise.Models.Requests
 {
     public class SearchProductParameterRequest
     {
-        public string search_product { get; set; }
+        [JsonPropertyName("search_product")]
+        public string Search_product { get; set; }
     }
 }
