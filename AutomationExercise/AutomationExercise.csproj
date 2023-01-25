@@ -120,6 +120,7 @@
     <None Include="Features\CreateUserAccount.feature" />
     <None Include="Features\ProductList.feature" />
     <None Include="Features\SearchProduct.feature" />
+    <None Include="Features\VerifyLogin.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

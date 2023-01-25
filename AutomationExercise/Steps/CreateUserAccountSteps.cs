@@ -28,7 +28,7 @@ namespace AutomationExercise.Steps
             {
                 Name = parameters[0],
                 Email = parameters[1],
-                Password = long.Parse(parameters[2]),
+                Password = parameters[2],
                 Title = parameters[3],
                 Birth_date = DateTime.ParseExact(parameters[4],"dd/MM/yyyy",CultureInfo.InvariantCulture),
                 Birth_month = int.Parse(parameters[5]),
@@ -39,10 +39,10 @@ namespace AutomationExercise.Steps
                 Address1 = parameters[10],
                 Address2 = parameters[11],
                 Country = parameters[12],
-                Zipcode = long.Parse(parameters[13]),
+                Zipcode = Int32.Parse(parameters[13]),
                 State = parameters[14],
                 City = parameters[15],
-                Mobile_number = long.Parse(parameters[16])
+                Mobile_number = parameters[16]
             };
         }
 

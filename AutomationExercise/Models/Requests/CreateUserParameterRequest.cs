@@ -10,7 +10,7 @@ namespace AutomationExercise.Models.Requests
         [JsonPropertyName("email")]
         public string Email { get; set; }
         [JsonPropertyName("password")]
-        public long Password { get; set; }
+        public string Password { get; set; }
         [JsonPropertyName("title")]
         public string Title { get; set; }
         [JsonPropertyName("birth_date")]
@@ -32,12 +32,12 @@ namespace AutomationExercise.Models.Requests
         [JsonPropertyName("country")]
         public string Country { get; set; }
         [JsonPropertyName("zipcode")]
-        public long Zipcode { get; set; }
+        public int Zipcode { get; set; }
         [JsonPropertyName("state")]
         public string State { get; set; }
         [JsonPropertyName("city")]
         public string City { get; set; }
         [JsonPropertyName("mobile_number")]
-        public long Mobile_number { get; set; }
+        public string Mobile_number { get; set; }
     }
 }

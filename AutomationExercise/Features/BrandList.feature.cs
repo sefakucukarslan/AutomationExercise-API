@@ -91,16 +91,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
-testRunner.And("Request Method \'GET\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Request Method \'GET\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 7
-testRunner.And("BrandList api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("BrandList api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 8
-testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 9
-testRunner.And("Response Data dolu olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Response Data dolu olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -124,19 +124,19 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 13
-testRunner.And("Request Method \'PUT\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Request Method \'PUT\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 14
-testRunner.And("BrandList api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("BrandList api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 15
-testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 16
-testRunner.And("Response Content Response Code \'405\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Response Content Response Code \'405\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 17
-testRunner.And("Response Content Response Message \'This request method is not supported.\' olduğu " +
+ testRunner.And("Response Content Response Message \'This request method is not supported.\' olduğu " +
                         "görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }

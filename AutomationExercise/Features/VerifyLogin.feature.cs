@@ -20,22 +20,22 @@ namespace AutomationExercise.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("SearchProduct")]
-    public partial class SearchProductFeature
+    [NUnit.Framework.DescriptionAttribute("VerifyLogin")]
+    public partial class VerifyLoginFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "SearchProduct.feature"
+#line 1 "VerifyLogin.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SearchProduct", "Search Product api testleri", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "VerifyLogin", "Verify Login api testleri", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,12 +74,12 @@ namespace AutomationExercise.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Post to search product")]
-        public void PostToSearchProduct()
+        [NUnit.Framework.DescriptionAttribute("Verify Login with valid details")]
+        public void VerifyLoginWithValidDetails()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post to search product", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Login with valid details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -94,50 +94,19 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Request Method \'POST\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 7
- testRunner.And("Request parameter değerine \'jean\' değeri eklenir", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Request parameter değerine \'email\' ve \'password\' değeri eklenir", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 8
- testRunner.And("Search Product api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+ testRunner.And("Verify login api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 9
  testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Post To search products without search_product paramater")]
-        public void PostToSearchProductsWithoutSearch_ProductParamater()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post To search products without search_product paramater", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
-this.ScenarioInitialize(scenarioInfo);
+#line 10
+ testRunner.And("Response Content Response Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 13
- testRunner.And("Request Method \'POST\' olarak ayarlanır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
-#line 14
- testRunner.And("Search Product api çağrılır", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
-#line 15
- testRunner.And("Response Status Code \'200\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
-#line 16
- testRunner.And("Response Content Response Code \'400\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
-#line 17
- testRunner.And("Response Content Response Message \'Bad request, search_product parameter is missi" +
-                        "ng in POST request.\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line 11
+ testRunner.And("Response Content Response Message \'User exists!\' olduğu görülür", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }
             this.ScenarioCleanup();
