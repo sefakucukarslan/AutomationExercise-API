@@ -16,7 +16,7 @@ namespace AutomationExercise.Steps
             action.SetMethodType(type);
         }
         
-        [StepDefinition("ProductList api çağrılır")]
+        [StepDefinition("BrandList api çağrılır")]
         public void GetAllProductListAction()
         {
             action.GetAllProductListAction();

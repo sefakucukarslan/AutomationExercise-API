@@ -110,6 +110,7 @@
     <None Include="app.config" />
     <None Include="Features\BrandList.feature" />
     <None Include="Features\ProductList.feature" />
+    <None Include="Features\SearchProduct.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
