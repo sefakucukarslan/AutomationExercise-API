@@ -15,9 +15,16 @@ namespace AutomationExercise.Actions
         VerifyLoginResponse response;
         private readonly string Url = "verifyLogin";
 
-        public void RunUserLogin(List<NameValuePair> nameValuePairs)
+        public void RunUserLoginWithParameters(List<NameValuePair> nameValuePairs)
         {
             restResponse = ExecuteClientWithParameters(Url, nameValuePairs);
+
+            response = JsonSerializer.Deserialize<VerifyLoginResponse>(restResponse.Content);
+        }
+
+        public void RunUserLogin()
+        {
+            restResponse = ExecuteClient(Url);
 
             response = JsonSerializer.Deserialize<VerifyLoginResponse>(restResponse.Content);
         }

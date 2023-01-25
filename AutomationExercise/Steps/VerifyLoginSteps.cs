@@ -23,17 +23,29 @@ namespace AutomationExercise.Steps
         [StepDefinition("Request parameter değerine '(.*)' ve '(.*)' değeri eklenir")]
         public void AddRequestParameter(string email, string password)
         {
-            nameValuePairs = new List<NameValuePair> {
-                new NameValuePair("email", email),
-                new NameValuePair("password", password)
-            };
-            
+            nameValuePairs = new List<NameValuePair>();
+            if (email != "")
+            {
+                nameValuePairs.Add(new NameValuePair("email", email));
+            }
+            if (password != "")
+            {
+                nameValuePairs.Add(new NameValuePair("password", password));
+            }
         }
 
         [StepDefinition("Verify login api çağrılır")]
-        public void RunUserLogin()
+        public void RunUserLoginWithParameters()
         {
-            action.RunUserLogin(nameValuePairs);
+            if (nameValuePairs != null)
+            {
+                action.RunUserLoginWithParameters(nameValuePairs);
+            }
+            else
+            {
+                action.RunUserLogin();
+            }
+
         }
 
         [StepDefinition(@"Response Status Code '(.*)' olduğu görülür")]
