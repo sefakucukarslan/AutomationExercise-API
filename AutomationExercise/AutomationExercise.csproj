@@ -100,32 +100,40 @@
     <Compile Include="Actions\Base\BaseActions.cs" />
     <Compile Include="Actions\BrandListActions.cs" />
     <Compile Include="Actions\CreateUserAccountActions.cs" />
+    <Compile Include="Actions\DeleteUserAccountActions.cs" />
     <Compile Include="Actions\ProductListActions.cs" />
     <Compile Include="Actions\SearchProductActions.cs" />
     <Compile Include="Actions\UpdateUserAccountActions.cs" />
+    <Compile Include="Actions\UserDetailActions.cs" />
     <Compile Include="Actions\VerifyLoginActions.cs" />
     <Compile Include="Models\Requests\SearchProductParameterRequest.cs" />
     <Compile Include="Models\Responses\BrandListResponse.cs" />
     <Compile Include="Models\Responses\CreateUserResponse.cs" />
+    <Compile Include="Models\Responses\DeleteUserResponse.cs" />
     <Compile Include="Models\Responses\ProductListResponse.cs" />
     <Compile Include="Models\Responses\SearchProductResponse.cs" />
     <Compile Include="Models\Responses\UpdateUserResponse.cs" />
+    <Compile Include="Models\Responses\UserDetailResponse.cs" />
     <Compile Include="Models\Responses\VerifyLoginResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\BrandListSteps.cs" />
     <Compile Include="Steps\CreateUserAccountSteps.cs" />
+    <Compile Include="Steps\DeleteUserAccountSteps.cs" />
     <Compile Include="Steps\ProductListSteps.cs" />
     <Compile Include="Steps\SearchProductSteps.cs" />
     <Compile Include="Steps\UpdateUserAccountSteps.cs" />
+    <Compile Include="Steps\UserDetailSteps.cs" />
     <Compile Include="Steps\VerifyLoginSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Features\BrandList.feature" />
     <None Include="Features\CreateUserAccount.feature" />
+    <None Include="Features\DeleteUserAccount.feature" />
     <None Include="Features\ProductList.feature" />
     <None Include="Features\SearchProduct.feature" />
     <None Include="Features\UpdateUserAccount.feature" />
+    <None Include="Features\UserDetailByEmail.feature" />
     <None Include="Features\VerifyLogin.feature" />
     <None Include="packages.config" />
   </ItemGroup>

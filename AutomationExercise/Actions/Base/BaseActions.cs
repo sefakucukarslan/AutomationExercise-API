@@ -63,6 +63,5 @@ namespace AutomationExercise.Actions.Base
             }
             return client.Execute(request);
         }
-
     }
 }
