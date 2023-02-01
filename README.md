@@ -19,7 +19,7 @@ https://www.automationexercise.com/api_list
 
 - **Gherkin**: Gherkin is a plain-text language. Designed to be learned by non-programmers
 
-- **BDD**: BDD (Behavior Driven Development) is a software development process that focuses on defining the behavior of software from the perspective of its users.
+- **BDD**: (Behavior Driven Development) is a software development process that focuses on defining the behavior of software from the perspective of its users.
 
 ***
 ```
